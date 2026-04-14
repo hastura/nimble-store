@@ -26,12 +26,12 @@ const App = () => {
 
   /* ─── NAVBAR ─── */
   const Navbar = () => (
-    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 bg-white border-b-2 border-black py-3 sm:py-4`}>
+    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-out bg-white ${scrolled ? 'py-1.5 sm:py-2 border-b-2 border-black shadow-[0_4px_20px_rgba(0,0,0,0.08)]' : 'py-3 sm:py-4 border-b-0 shadow-none'}`}>
       <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-10 flex justify-between items-center text-black">
         <div className="flex items-center gap-6 sm:gap-10 lg:gap-14">
-          <button onClick={() => setPage('home')} className="flex items-center text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter italic">
+          <button onClick={() => setPage('home')} className={`flex items-center font-black uppercase tracking-tighter italic transition-all duration-500 ${scrolled ? 'text-lg sm:text-xl lg:text-2xl' : 'text-xl sm:text-2xl lg:text-3xl'}`}>
             NIMBLE
-            <span className="w-3 h-6 sm:w-4 sm:h-8 bg-[#B7FF3C] border-2 border-black ml-1"></span>
+            <span className={`bg-[#B7FF3C] border-2 border-black ml-1 transition-all duration-500 ${scrolled ? 'w-2.5 h-5 sm:w-3 sm:h-6' : 'w-3 h-6 sm:w-4 sm:h-8'}`}></span>
           </button>
           
           <div className="hidden lg:flex gap-10">
@@ -44,11 +44,11 @@ const App = () => {
         </div>
 
         <div className="flex items-center gap-4 sm:gap-6 lg:gap-8">
-          <Search size={18} className="cursor-pointer hover:text-gray-500 sm:w-5 sm:h-5" />
+          <Search size={scrolled ? 16 : 18} className="cursor-pointer hover:text-gray-500 transition-all duration-500" />
           
           <div className="flex items-center gap-2 sm:gap-3 cursor-pointer group" onClick={() => setPage('pdp')}>
-            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-black text-white flex items-center justify-center group-hover:bg-[#B7FF3C] group-hover:text-black transition-all">
-              <ShoppingCart size={16} />
+            <div className={`bg-black text-white flex items-center justify-center group-hover:bg-[#B7FF3C] group-hover:text-black transition-all duration-500 ${scrolled ? 'w-8 h-8 sm:w-9 sm:h-9' : 'w-9 h-9 sm:w-10 sm:h-10'}`}>
+              <ShoppingCart size={scrolled ? 14 : 16} />
             </div>
             <div className="hidden md:flex flex-col leading-none">
               <span className="text-[8px] font-black uppercase tracking-widest opacity-30 italic leading-none">BAG</span>
@@ -57,7 +57,7 @@ const App = () => {
           </div>
           
           <button className="lg:hidden" onClick={() => setIsMenuOpen(true)}>
-            <Menu size={22} />
+            <Menu size={scrolled ? 20 : 22} />
           </button>
         </div>
       </div>
@@ -116,7 +116,7 @@ const App = () => {
                   className="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-all duration-[2000ms]"
                   alt="Gamer Culture"
                 />
-                <div className="absolute top-8 right-8 xl:top-10 xl:right-10 bg-white border-2 border-black p-3 xl:p-4 rotate-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 transition-transform">
+                <div className="absolute top-10 right-10 xl:top-14 xl:right-14 bg-white border-2 border-black p-3 xl:p-4 rotate-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:rotate-0 transition-transform z-10">
                    <p className="text-[9px] xl:text-[10px] font-black uppercase tracking-widest leading-none italic">DROP_001</p>
                 </div>
                 <div className="absolute bottom-8 left-8 xl:bottom-10 xl:left-10 bg-[#B7FF3C] text-black px-3 py-1 text-[9px] xl:text-[10px] font-black uppercase tracking-widest italic border-2 border-black">
