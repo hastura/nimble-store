@@ -94,7 +94,22 @@ const App = () => {
             
             <h1 className="text-[16vw] sm:text-[14vw] lg:text-[10vw] xl:text-[9vw] font-black leading-[0.82] tracking-tighter uppercase italic mb-8 sm:mb-12">
               BUILT<br />
-              <span className="text-white" style={{ WebkitTextStroke: '2px black' }}>UNBOUND</span><br />
+              <svg height="1em" viewBox="0 0 520 90" style={{ overflow: 'visible', display: 'inline-block', verticalAlign: 'baseline' }}>
+                <text
+                  x="0" y="75"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="85"
+                  fontWeight="900"
+                  fontStyle="italic"
+                  letterSpacing="-0.05em"
+                  style={{ paintOrder: 'stroke fill' }}
+                  fill="var(--nimble-white, #fff)"
+                  stroke="black"
+                  strokeWidth="2px"
+                >
+                  UNBOUND
+                </text>
+              </svg><br />
               STREETS<span className="inline-block w-[0.8em] sm:w-[1.2em] h-[0.12em] sm:h-[0.15em] bg-[#B7FF3C] ml-2 sm:ml-4 align-baseline"></span>
             </h1>
 
@@ -389,7 +404,22 @@ const App = () => {
            <div className="lg:col-span-7">
               <h4 className="text-[14vw] sm:text-[10vw] lg:text-[8vw] font-black uppercase tracking-tighter leading-none italic mb-6 sm:mb-10">
                 NIMBLE<br />
-                <span style={{ WebkitTextStroke: '2px black', color: 'transparent' }}>REBELS_</span>
+                <svg height="1em" viewBox="0 0 460 90" style={{ overflow: 'visible', display: 'inline-block', verticalAlign: 'baseline' }}>
+                  <text
+                    x="0" y="75"
+                    fontFamily="Inter, sans-serif"
+                    fontSize="85"
+                    fontWeight="900"
+                    fontStyle="italic"
+                    letterSpacing="-0.05em"
+                    style={{ paintOrder: 'stroke fill' }}
+                    fill="var(--nimble-white, #fff)"
+                    stroke="black"
+                    strokeWidth="2px"
+                  >
+                    REBELS_
+                  </text>
+                </svg>
               </h4>
               <div className="flex border-b-4 border-black pb-4 max-w-md">
                  <input type="email" placeholder="JOIN_THE_MOVEMENT" className="bg-transparent border-none text-[11px] sm:text-[12px] font-black uppercase tracking-widest focus:outline-none w-full placeholder:opacity-30" />
